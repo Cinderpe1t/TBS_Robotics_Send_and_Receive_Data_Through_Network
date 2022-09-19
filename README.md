@@ -105,5 +105,13 @@ while True:
     time.sleep(1)
 ```
 ## Run the codes
+- Modify port numbers at server and client Python codes
+- Set server IP address at client code
+```
+HOST='192.168.1.121'
+PORT=5025
+```
 - Remember to set up and run server-side first
 - Client follows after server set up
+- At server, `python3 tcpip_server_v1.py`
+- At client, `python3 client_test_v1.py`
