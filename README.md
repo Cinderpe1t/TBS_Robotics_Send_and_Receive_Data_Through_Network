@@ -53,7 +53,7 @@ PING 192.168.1.1 (192.168.1.1): 56 data bytes
 - Transfer Control Protocol / Internet Protocol: Packet delivery is ensured with acknowledgement and quality control. Connection-oriented protocol. Most of the internet communication relies on TCP/IP.
 - User Datagram Protocol: Connection-less protocol. Just send the data and delivery is not confirmed.
 ## Prepare server
-- Need socket library. Let's use port #5025 for the test.
+- Need `socket` library. Let's use port #5025 for the test.
 - Set up TCP/IP socket and bind with the pre-arranged port number to listen to the incoming request.
 ```
 import socket
@@ -80,7 +80,6 @@ while True:
     print(arrNum)
 ```
 ## Prepare client
-- Need socket library
 - Connect to server, then send data to server
 - Data needs to be formatted as byte data `utf-8` to be sent in the packet
 ```
