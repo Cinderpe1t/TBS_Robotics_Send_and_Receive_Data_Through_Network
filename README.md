@@ -6,7 +6,7 @@ TBS Robotics Send and Receive Data Through Network
 - Wired Ethernet is another good option, in case wireless connection is questionable
 ## Understand the network setup
 - Join the TBS_Robotics network with your laptop and microcontrollers
-- Find out your IP addresses at laptop or microcontroller
+- Find out your IP addresses at laptop or microcontroller with `ifconfig`
 ```
 (base) Apex-penguin:~ akim$ ifconfig
 lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
@@ -36,14 +36,8 @@ PING 192.168.1.1 (192.168.1.1): 56 data bytes
 64 bytes from 192.168.1.1: icmp_seq=0 ttl=64 time=16.012 ms
 64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=10.818 ms
 64 bytes from 192.168.1.1: icmp_seq=2 ttl=64 time=7.073 ms
-64 bytes from 192.168.1.1: icmp_seq=3 ttl=64 time=6.030 ms
-64 bytes from 192.168.1.1: icmp_seq=4 ttl=64 time=6.509 ms
 ```
 - Firewall in the laptop might block the ping request. It is because the ping can be used as a basic hacking tool to check the existence of a computer in a network. Raspberry Pi or JETSON Nano do not block them by default.
-## Setup server and client
-- Edit server and client python codes with IP addresses
-- Run server python code first
-- Run client python code
 ## IP address and port
 - HTTP, HTTPS, FTP, FTPS are type of protocols commonly used for internet. Domain names are translated into IP address by domain name server (DNS). Each protocol has default port to connect.
 - Hyper Text Transfer Protocol: port #80
@@ -105,13 +99,13 @@ while True:
     time.sleep(1)
 ```
 ## Run the codes
-- Modify port numbers at server and client Python codes
+- Modify IP addresses and port numbers at server and client Python codes
 - Set server IP address at client code
 ```
 HOST='192.168.1.121'
 PORT=5025
 ```
-- Remember to set up and run server-side first
+- Remember to set up and run server-side first so that server waits for client's connection request. If server is not ready, client's request will be denied and the client code will stop with an exception.
 - Client follows after server set up
 - At server, `python3 tcpip_server_v1.py`
 - At client, `python3 client_test_v1.py`
