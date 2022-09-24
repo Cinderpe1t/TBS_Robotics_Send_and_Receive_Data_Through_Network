@@ -108,3 +108,6 @@ PORT=5025
 - Client follows after server set up
 - At server, `python3 tcpip_server_v1.py`
 - At client, `python3 client_test_v1.py`
+
+
+[Next: Gamepad with Python](https://github.com/Cinderpe1t/TBS_Robotics_Gamepad_with_Python) / [Top: Introduction](https://github.com/Cinderpe1t/TBS_Robotics_Introduction)
